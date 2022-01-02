@@ -1,4 +1,6 @@
 import re
+from time import sleep
+
 import requests
 
 
@@ -37,6 +39,7 @@ def get_spf_record(domain_name):
 def write_file(domain_name):
     with open("output_spf.txt", "a") as f:
         f.write(domain_name+" Vulnerable\n")
+        sleep(1)
 
 
 if __name__ == '__main__':
